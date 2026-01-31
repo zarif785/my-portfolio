@@ -93,7 +93,7 @@ function App() {
       <section id="home" className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
-            <p className="hero-greeting">Hi, I'm</p>
+            <p className="hero-greeting">Hello, I'm</p>
             <h1 className="hero-name">
               <span className="gradient-text">Zarif Arefeen</span>
             </h1>
