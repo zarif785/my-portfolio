@@ -43,6 +43,27 @@ cd portfolio
 ```bash
 npm install
 ```
+portfolio/
+├── src/
+│   ├── components/          # Reusable components
+│   │   ├── Navigation.tsx   # Navigation bar
+│   │   ├── ParticleBackground.tsx
+│   │   ├── RobotAvatar.tsx
+│   │   ├── ScrollReveal.tsx
+│   │   ├── SkillCard.tsx
+│   │   └── ProjectCard.tsx
+│   ├── App.tsx              # Main application component
+│   ├── App.css              # Application styles
+│   ├── index.css            # Global styles
+│   └── main.tsx             # Application entry point
+├── public/                  # Static assets
+├── index.html              # HTML template
+└── package.json            # Project dependencies
+```
+
+## 🚢 Deployment
+
+Build the project for production:
 
 3. Start the development server:
 ```bash
