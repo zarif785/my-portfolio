@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio website built with React, TypeScript, and Vite. Features stunning animations, particle effects, and a responsive design to showcase your work and skills.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Interactive Elements
+- **Particle Background**: Dynamic particle system with rainbow colors that respond to cursor movement
+- **Robot Avatar**: Animated robot companion with eye-tracking and contextual witty messages
+- **Scroll Animations**: Smooth reveal animations triggered as you scroll through sections
+- **3D Card Effects**: Interactive tilt effects on project and skill cards
+- **Typing Animation**: Animated text effect in the hero section
 
-## React Compiler
+### Sections
+- **Hero**: Eye-catching introduction with animated text and anime character
+- **About**: Personal introduction with statistics cards
+- **Skills**: Showcase of technical skills with animated progress bars
+- **Projects**: Featured projects with descriptions, tags, and links
+- **Contact**: Contact form and information cards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Design
+- **Glassmorphism**: Modern glass-effect UI elements
+- **Gradient Accents**: Vibrant gradient text and backgrounds
+- **Dark Theme**: Professional dark color scheme
+- **Responsive**: Fully responsive design for all screen sizes
+- **Smooth Scrolling**: Seamless navigation between sections
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🛠️ Built With
+
+- **React 19** - UI library
+- **TypeScript** - Type safety and better developer experience
+- **Vite** - Fast build tool and dev server
+- **CSS3** - Styling with modern features (animations, gradients, glassmorphism)
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+## 🎨 Customization
+
+### Update Personal Information
+
+Edit `src/App.tsx` to customize:
+- Your name and title
+- About section content
+- Skills and proficiency levels
+- Project details
+- Contact information
+
+### Modify Styling
+
+- `src/index.css` - Global styles and design tokens
+- `src/App.css` - Main application styles
+- Component-specific CSS files in `src/components/`
+
+### Robot Avatar Messages
+
+Edit `src/components/RobotAvatar.tsx` to customize the witty messages displayed by the robot companion.
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── components/          # Reusable components
+│   │   ├── Navigation.tsx   # Navigation bar
+│   │   ├── ParticleBackground.tsx
+│   │   ├── RobotAvatar.tsx
+│   │   ├── ScrollReveal.tsx
+│   │   ├── SkillCard.tsx
+│   │   └── ProjectCard.tsx
+│   ├── App.tsx              # Main application component
+│   ├── App.css              # Application styles
+│   ├── index.css            # Global styles
+│   └── main.tsx             # Application entry point
+├── public/                  # Static assets
+├── index.html              # HTML template
+└── package.json            # Project dependencies
+```
+
+## 🚢 Deployment
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+The optimized files will be in the `dist/` directory, ready to deploy to any static hosting service:
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3
+- Cloudflare Pages
+
+## 📝 License
+
+This project is open source and available for personal and commercial use.
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio!
+
+---
+
+Built with ❤️ using React and TypeScript
