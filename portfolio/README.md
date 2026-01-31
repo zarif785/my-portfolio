@@ -43,6 +43,27 @@ cd portfolio
 ```bash
 npm install
 ```
+portfolio/
+├── src/
+│   ├── components/          # Reusable components
+│   │   ├── Navigation.tsx   # Navigation bar
+│   │   ├── ParticleBackground.tsx
+│   │   ├── RobotAvatar.tsx
+│   │   ├── ScrollReveal.tsx
+│   │   ├── SkillCard.tsx
+│   │   └── ProjectCard.tsx
+│   ├── App.tsx              # Main application component
+│   ├── App.css              # Application styles
+│   ├── index.css            # Global styles
+│   └── main.tsx             # Application entry point
+├── public/                  # Static assets
+├── index.html              # HTML template
+└── package.json            # Project dependencies
+```
+
+## 🚢 Deployment
+
+Build the project for production:
 
 3. Start the development server:
 ```bash
@@ -64,6 +85,44 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint for code quality
+
+## 🚢 Deployment
+
+This project is configured for automated deployment to Vercel with CI/CD via GitHub Actions.
+
+### Quick Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/YOUR_REPO)
+
+### Manual Deployment
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+### Automated CI/CD
+
+The project includes a GitHub Actions workflow that automatically:
+- ✅ Runs linting and builds on every PR
+- 🚀 Deploys preview environments for pull requests
+- 🌐 Deploys to production on push to `main` branch
+
+**Setup Instructions:**
+
+1. Create a Vercel account and link your GitHub repository
+2. Get your Vercel credentials (see [DEPLOYMENT.md](./DEPLOYMENT.md))
+3. Add these secrets to your GitHub repository:
+   - `VERCEL_TOKEN`
+   - `VERCEL_ORG_ID`
+   - `VERCEL_PROJECT_ID`
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## 🎨 Customization
 
@@ -90,6 +149,9 @@ Edit `src/components/RobotAvatar.tsx` to customize the witty messages displayed 
 
 ```
 portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # CI/CD workflow
 ├── src/
 │   ├── components/          # Reusable components
 │   │   ├── Navigation.tsx   # Navigation bar
@@ -103,24 +165,10 @@ portfolio/
 │   ├── index.css            # Global styles
 │   └── main.tsx             # Application entry point
 ├── public/                  # Static assets
-├── index.html              # HTML template
+├── vercel.json             # Vercel configuration
+├── DEPLOYMENT.md           # Detailed deployment guide
 └── package.json            # Project dependencies
 ```
-
-## 🚢 Deployment
-
-Build the project for production:
-
-```bash
-npm run build
-```
-
-The optimized files will be in the `dist/` directory, ready to deploy to any static hosting service:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3
-- Cloudflare Pages
 
 ## 📝 License
 
