@@ -95,7 +95,7 @@ function App() {
           <div className="hero-text">
             <p className="hero-greeting">Hi, I'm</p>
             <h1 className="hero-name">
-              <span className="gradient-text">Your Name</span>
+              <span className="gradient-text">Zarif Arefeen</span>
             </h1>
             <h2 className="hero-title">
               {typedText}
